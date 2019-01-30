@@ -1,11 +1,9 @@
 <%-- 
     Document   : visit
-    Created on : 23/01/2019, 16:42:53
+    Created on : 29/01/2019, 17:18:28
     Author     : work
 --%>
 
-<%--<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="java.util.Date"%>--%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

@@ -16,27 +16,31 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ *
+ * @author work
+ */
+@WebServlet(urlPatterns = {"/visit"})
+public class visita extends HttpServlet {
 
-@WebServlet(name="visit", urlPatterns = {"/visit"})
-public class Visitante extends HttpServlet {
-    
-   
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        
     }
 
-    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-   
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        processRequest(request, response);
         
         String nome = request.getParameter("nome");
         String sobrenome = request.getParameter("sobrenome");        
@@ -64,9 +68,9 @@ public class Visitante extends HttpServlet {
         
         
         request.getRequestDispatcher("visit.jsp").forward(request,response);
-        
     }
 
+    
     @Override
     public String getServletInfo() {
         return "Short description";
